@@ -62,7 +62,7 @@
 }
 
 .head{
-    background: url('img/background.svg') No-repeat center/cover;
+    background: url('background.svg') No-repeat center/cover;
     
     background-attachment: fixed;
     height: 100vh;  
@@ -248,7 +248,7 @@ h1.about-heading{
 /* ABOUT CONTENT */
 
 .about{
-    background: url('img/Sprinkle.svg') no-repeat center/cover;
+    background: url('Sprinkle.svg') no-repeat center/cover;
 /* https://wallpapers-house.com/wp-content/uploads/wallpaper_822/wallpaper_0000209068.jpg */
     height: 100vh;
     padding-top: 50px;
