@@ -2,6 +2,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
+    text-decoration: none;
+    list-style: none;
 }
 
 .navbar{
@@ -17,6 +19,9 @@
 
 }
 
+.closeButton{
+    display: none;
+}
 
 .logo{
     margin-top: .4em;
@@ -41,7 +46,6 @@
     display: none;
 }
 
-
 .nav-right{
     float: right;
     margin: 2px;
@@ -58,7 +62,7 @@
 }
 
 .head{
-    background: url('background.svg') No-repeat center/cover;
+    background: url('img/background.svg') No-repeat center/cover;
     
     background-attachment: fixed;
     height: 100vh;  
@@ -244,12 +248,14 @@ h1.about-heading{
 /* ABOUT CONTENT */
 
 .about{
-    background: url('Sprinkle.svg') no-repeat center/cover;
+    background: url('img/Sprinkle.svg') no-repeat center/cover;
 /* https://wallpapers-house.com/wp-content/uploads/wallpaper_822/wallpaper_0000209068.jpg */
     height: 100vh;
     padding-top: 50px;
     background-attachment: fixed;
     color:white;
+    animation: transitionIn 0.75s;
+
 }
 .about-container{
     margin-top: 100px;
@@ -260,6 +266,7 @@ h1.about-heading{
     margin-left: 250px;
 
 }
+
 
 
 .about-heading, p{
@@ -319,38 +326,7 @@ h1.about-heading{
     font-family: 'Roboto';
 }
 
-/* .about-container{
-    position: relative;
-    top: 30%;
-}
-
-
-.about-heading, p{
-    color: black;
-    font-family: 'Roboto';
-    font-weight: bold;
-}
-.about-heading{
-    position: absolute;
-    top: -100%;
-    left: 43%;
-    font-size: 3rem;
-    
-}
-.about img{
-    position: absolute;
-    top: -20%;
-    left: 30%;
-    width: 400px;
-    height: 400px;
-    object-fit: fixed;
-}
-.divider{
-    position: absolute;
-    left: 50%;
-    border-left: 1px solid rgba(0,0,0, .905);
-    height: 400px;
-} */
+/* SKILLS CONTENT */
 
 
 
@@ -360,10 +336,67 @@ h1.about-heading{
     height: 100vh;
     color: white;
     background-attachment: fixed;
+    display: grid;
+    grid-template: 
+    "header header header" 20%
+    "skillContents skillContents skillContents" 80%
+    /20% 80%;
+    
+
 }
 .skills p{
     color: white;
 }
+
+
+
+.skillsHeader{
+    grid-area: header;
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.0rem;
+}
+.skillsContent{
+    grid-area: skillContents;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.frontend, .backend, .database, .tools{
+    height: 100%;
+    width: 25%;
+
+    text-align: center;
+}
+
+.skillsContent h2{
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+.skillIcon{
+    width: 60px;
+    margin: 10px;
+}
+
+
+.eyebtn{
+    display: none;
+}
+h1.skillHeader{
+        font-variant:  small-caps;
+}
+
+
+#frontendSwitch, #backendSwitch, #dbSwitch, #toolSwitch{
+    display: none;
+}
+
+
+/* experiences content  */
 .experiences{
     background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_891/wallpaper_0000209080.jpg') No-repeat center/cover;
     height: 100vh;
@@ -396,6 +429,9 @@ h1.about-heading{
 html{
     scroll-behavior: smooth;
 }
+
+
+
 
 
 @keyframes typing {
@@ -704,6 +740,8 @@ html{
     }
     
   }
+ 
+
   @keyframes transitionIn{
     from {
         opacity: 0;
@@ -785,5 +823,214 @@ html{
         margin: 0;
     }
 
+    /* SKILLS RESPONSIVENESS */
+
+
+    .skillsContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skillsContent h2{
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    /* FRONTENDContainer */
+    .frontend ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(80, 78, 78);
+        top: 0%;
+        z-index: 100;
+        left: 100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: all .2s;
+    }
+
+    .closeButton{
+        display: flex;
+        font-size: 50px;
+        font-family: sans-serif;
+        position: absolute;
+        top: 1%;
+        left: 1%;  
+    }
+    .closeButton img{
+        width: 50px;
+    }
+  
+    .frontend h2{
+       margin: 0 auto;
+    }
+
+  
     
+    .skillsHeader{
+        text-align: center;
+    }
+    .skills{
+        height: 100vh;
+    }
+    .eyebtn{
+        display: grid;
+       position: absolute;
+       left: 50%;
+   
+    
+    }
+    #frontendSwitch:checked ~ ul, p{
+        left: 0;
+        margin: 0;
+    }
+    
+    
+  
+    .x{
+        font-size: 100px;
+    }
+
+    /* backend */
+    .backend ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(80, 78, 78);
+        top: 0%;
+        z-index: 100;
+        left: 100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: all .2s;
+    }
+    .backend li{
+        margin: 50px;
+    }
+
+    .closeButton{
+        display: flex;
+        font-size: 50px;
+        font-family: sans-serif;
+        position: absolute;
+        top: 1%;
+        left: 1%;  
+    }
+    .closeButton img{
+        width: 50px;
+    }
+  
+    .eyebtn{
+        display: grid;
+       position: absolute;
+       left: 50%;
+   
+    
+    }
+    #backendSwitch:checked ~ ul{
+        left: 0;
+        margin: 0;
+    }
+
+    /* databaseContainer */
+    .database ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(80, 78, 78);
+        top: 0%;
+        z-index: 100;
+        left: 100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: all .2s;
+    }
+
+    
+    .database li{
+        margin: 50px;
+    }
+    .closeButton{
+        display: flex;
+        font-size: 50px;
+        font-family: sans-serif;
+        position: absolute;
+        top: 1%;
+        left: 1%;  
+    }
+    .closeButton img{
+        width: 50px;
+    }
+  
+    .eyebtn{
+        display: grid;
+       position: absolute;
+       left: 50%;
+   
+    
+    }
+    #dbSwitch:checked ~ ul{
+        left: 0;
+        margin: 0;
+    }
+
+
+    /* toolsContainer */
+
+    .tools ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(80, 78, 78);
+        top: 0%;
+        z-index: 100;
+        left: 100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: all .2s;
+    }
+
+
+    
+    .tools li{
+        margin: 50px;
+    }
+    .closeButton{
+        display: flex;
+        font-size: 50px;
+        font-family: sans-serif;
+        position: absolute;
+        top: 1%;
+        left: 1%;  
+    }
+    .closeButton img{
+        width: 50px;
+    }
+  
+    .eyebtn{
+        display: grid;
+       position: absolute;
+       left: 50%;
+   
+    
+    }
+    #toolSwitch:checked ~ ul{
+        left: 0;
+        margin: 0;
+    }
 }
