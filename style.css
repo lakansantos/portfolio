@@ -18,6 +18,19 @@
  
 
 }
+.download{
+    padding: 10px;
+    background: none;
+    border: 2px solid white;
+}
+.download:hover{
+    border: 2px solid rgb(0, 140, 255);
+}
+
+.downloadIcon{
+    display: none;
+}
+
 
 .closeButton{
     display: none;
@@ -25,7 +38,7 @@
 
 .logo{
     margin-top: .4em;
-   margin-right: 500px;
+    margin-right: 700px;
 
 }
 .logo:hover{
@@ -46,23 +59,30 @@
     display: none;
 }
 
-.nav-right{
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* .nav-right{
     float: right;
     margin: 2px;
     margin-top: 30px;
     padding-right: 5rem;
     
-}
+} */
 
-.nav-left{
+/* .nav-left{
     float: right;
     margin: 2px;
     margin-top: 30px;
     padding-right: 5rem;
-}
+} */
 
 .head{
-    background: url('background.svg') No-repeat center/cover;
+    background: url('img/background.svg') No-repeat center/cover;
     
     background-attachment: fixed;
     height: 100vh;  
@@ -220,6 +240,7 @@ h1.about-heading{
     border: 2px solid black;
     height: 40px;
     font-family: 'Roboto';
+   
 }
 
 .content button:hover{
@@ -248,7 +269,7 @@ h1.about-heading{
 /* ABOUT CONTENT */
 
 .about{
-    background: url('Sprinkle.svg') no-repeat center/cover;
+    background: url('img/Sprinkle.svg') no-repeat center/cover;
 /* https://wallpapers-house.com/wp-content/uploads/wallpaper_822/wallpaper_0000209068.jpg */
     height: 100vh;
     padding-top: 50px;
@@ -416,7 +437,7 @@ h1.skillHeader{
 
     background-color: #C3C8D5;
     height: 100vh;
-    background-attachment: fixed;
+
 }
 
 
@@ -431,8 +452,174 @@ html{
 }
 
 
+/* contact  */
+
+.contact{
+    display: grid;
+    grid-template:
+    "contactHeader contactHeader ContactHeader" 20%
+    "contentContact contentContact contentContact" 80%
+    /20% 80%;
+    background-size: contain;
+}
 
 
+.contactHeader{
+    grid-area: contactHeader;
+}
+.contactHeader h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+h2.contactHead{
+    font-variant: small-caps;
+}
+.contentContact{
+    grid-area: contentContact;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+ 
+}
+
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    margin-right: 20px;
+}
+.formContainer > form{
+
+    margin-left: 10px;
+    
+   
+}
+.formContainer label{
+    display: flex;
+    margin-top: 5px;
+    padding: 5px;
+}
+form .input-box input{
+    display: flex;
+    width: 94%;
+    height: 50px;
+    outline: none;
+    text-indent: 5px;
+
+}
+form .input-box textarea{
+    outline: none;
+}
+
+form .input-box input:focus{
+    border-color: rgb(0, 140, 255);
+}
+
+form .input-box textarea:focus{
+    border: 2px solid rgb(0, 140, 255);
+}
+.socmedContainer{
+    width: 30%;
+    height: 80%;
+    margin-left: 20px;
+}
+
+.textAreaContact{
+    text-indent: 5px;
+}
+
+.contact .iconContact{
+    object-fit: fixed;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 300px;  
+
+}
+
+.contact button{
+    margin-top: 20px;
+    background: rgba(0,0,0, .905);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    display: flex;
+    float: right;
+    margin-right: 16px;
+
+}
+
+.contact button:hover{
+
+    transform: scale(1.1);
+    transition: .5s;
+}
+.email{
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* footerContents */
+footer{
+    height: 200px;
+    background-color:  rgba(0,0,0, .920);
+
+}
+.footerContents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.footerContents p{
+    color: white;
+    margin: 10px;
+}
+
+.iconsSocmed{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-list{
+    margin-top: 40px;
+    width: 50px;
+    transition: 1s;
+}
+
+.icon-list:hover{
+    transform: scale(1.3)
+}
+
+.footerContents .heartIcon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+}
+
+.footerContents p:hover{
+    color: rgb(0, 140, 255);
+}
+.footerContents .githubIcon{
+    margin-top: 20px;
+}
 
 @keyframes typing {
     from { width: 0 }
@@ -511,7 +698,7 @@ html{
     .content{
         
         position: relative;
-        top: 30%;
+        top: 35%;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -519,7 +706,9 @@ html{
 
     }
     .content p{
-        font-size: 10px;
+        position: relative;
+        top: 300%;
+        font-size: 13px;
         font-weight: bold;
         
     }
@@ -554,7 +743,8 @@ html{
     h1.heading{
         font-variant: small-caps;
     }
-    
+
+
     
     .navbar ul li{
         display: inline;
@@ -586,29 +776,31 @@ html{
     
     }
     .content button{
+        margin-top: 70px;
         background: none;
         border-radius: 10px;
         width: 120px;
         border: 2px solid black;
         height: 40px;
         font-family: 'Roboto';
+        z-index: -1;
     }
     .textOverlay{
-        opacity: 0;
+      display: none;
     }
     .textOverlay:hover{
-        opacity: 0;
+        display: none;
     }
     .twitterText{
-        opacity: 0;
+        display: none;
     }
     .belowText{
         pointer-events: none;
-        opacity: 0;
+        display: none;
     }
     
     .textOverlayLogo:hover{
-        opacity: 0;
+        display: none;
     }
     
     .content button:hover{
@@ -620,7 +812,9 @@ html{
     }
     .heading{
         font-size: 2.5rem;
-        overflow: hidden; 
+        overflow: hidden;
+        position: relative;
+        top: 150%; 
         border-right: .15em solid black; 
         white-space: nowrap; 
         margin: 0 auto; 
@@ -651,8 +845,11 @@ html{
         border-radius: 50%;
         border: 5px solid rgb(0, 140, 255);
         background: linear-gradient(to right, #c4cbd6, #c9d3da, #d0dbde, #dae2e3, #e4e9e8);
-    
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
     }
+
     
        
     .about-heading{
@@ -663,7 +860,7 @@ html{
 
     }
     .about h3{
-
+        text-align: center;
         color: black;
         font-size:  1.5rem;
     }
@@ -728,7 +925,7 @@ html{
     
         background-color: #C3C8D5;
         height: 100vh;
-        background-attachment: fixed;
+
     }
     
     
@@ -757,6 +954,14 @@ html{
 
 
 @media (max-width: 480px){
+
+    /* content home */
+
+    .content img{
+        position: absolute;
+        top: -40%;
+        left: 38%;
+    }
     .checkbtn {
         display: flex;
         flex-direction: row;
@@ -765,7 +970,16 @@ html{
         margin-left: 10px;
     }
     
+    .download{
+        border: none;
+        padding: 5px;
+   
+    }
 
+    .downloadIcon{
+        display: inline;
+        width: 30px;
+    }
     .logo{
         position: absolute;
         width: 50px;
@@ -774,7 +988,7 @@ html{
     }
     .navbar ul {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         position: fixed;
    
         width: 100%;
@@ -834,10 +1048,19 @@ html{
     }
 
     .skillsContent h2{
-        font-size: 2rem;
+        font-size: 1.2rem;
         margin-top: 0;
+        justify-content: center;
+        
+    }
+    .skillsHeader h1{
+        font-size: 2rem;
+    }
+    .frontendHead{
+        margin-left: 100px;
     }
 
+    
     /* FRONTENDContainer */
     .frontend ul{
         display: flex;
@@ -851,8 +1074,8 @@ html{
         background-color: rgb(80, 78, 78);
         top: 0%;
         z-index: 100;
-        left: 100%;      /* para mapunta sa kanan, ilagay -left: 100% */
-        transition: all .2s;
+        left: -100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: .2s
     }
 
     .closeButton{
@@ -882,7 +1105,7 @@ html{
     .eyebtn{
         display: grid;
        position: absolute;
-       left: 50%;
+       left: 46%;
    
     
     }
@@ -929,13 +1152,7 @@ html{
         width: 50px;
     }
   
-    .eyebtn{
-        display: grid;
-       position: absolute;
-       left: 50%;
-   
     
-    }
     #backendSwitch:checked ~ ul{
         left: 0;
         margin: 0;
@@ -974,13 +1191,7 @@ html{
         width: 50px;
     }
   
-    .eyebtn{
-        display: grid;
-       position: absolute;
-       left: 50%;
    
-    
-    }
     #dbSwitch:checked ~ ul{
         left: 0;
         margin: 0;
@@ -1022,15 +1233,76 @@ html{
         width: 50px;
     }
   
-    .eyebtn{
-        display: grid;
-       position: absolute;
-       left: 50%;
-   
     
-    }
     #toolSwitch:checked ~ ul{
         left: 0;
         margin: 0;
+        
     }
+
+    .projects{
+        height: 1000px;
+    }
+    /* contactResponsive */
+
+    .contentContact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        height: 1200px;
+        background-color: aqua;
+   
+    }
+  
+    .contactHeader{
+        height: 20%;
+
+    }
+
+    .socmedContainer .iconContact{
+        width: 200px;
+        object-fit: cover;
+        height: 200px;
+        position: relative;
+        top: -30%;
+        margin-left: 100px;
+
+    }
+     .email h2, p{
+        position: relative;
+       
+    }
+    .contactHeader h2{
+        margin-top: 0;
+        font-size: 30px;
+    }
+    .socmedContainer .icon-list{
+        display: flex;
+        margin: 15px;
+        position: relative;
+        top: -100%;
+        
+    }
+
+    .formContainer{
+        display: flex;
+        position: relative;
+        top:-20%;
+        margin: 0 auto;
+    
+        width: 350px;
+    }
+    .formContainer button{
+        font-size: 13px;
+        display: flex;
+        float: left;
+        margin-bottom: 10px;
+    
+    }
+    .formContainer form textarea{
+        width: 300px;
+    }
+
 }
+  
