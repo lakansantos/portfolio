@@ -74,7 +74,7 @@ body{
 
 
 .head{
-    background: url('img/background.svg') No-repeat center/cover;
+    background: url('background.svg') No-repeat center/cover;
     background-attachment: fixed;
 
     height: 100vh;  
@@ -259,7 +259,7 @@ h1.about-heading{
 /* ABOUT CONTENT */
 
 .about{
-    background: url('img/Sprinkle.svg') no-repeat center/cover;
+    background: url('Sprinkle.svg') no-repeat center/cover;
     height: 100vh;
     background-attachment: fixed;
     color:white;
