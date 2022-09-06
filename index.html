@@ -41,6 +41,7 @@
                 <li><a href="#Projects" class="nav-right">Projects</a></li>
                 <li><a href="#Contact" class="nav-right">Contact</a></li>
                 <li><a href="img/Curriculum Vitae.pdf" class="nav-right download" download><img src="https://cdn-icons-png.flaticon.com/512/2989/2989976.png" alt="download" class="downloadIcon"> Download CV</a></li>
+                
             </ul>   
           
         </div>
@@ -63,7 +64,10 @@
   
     
    <div id="About" class="about">
-            <h1 class="about-heading">About <span class="meSpan">Me</span> </h1>        
+            <div class="headerAbout">
+                <h1 class="about-heading">About <span class="meSpan">  &nbsp;Me</span> </h1>    
+            </div>
+     
             <div class="about-container">
                 <div class="picture-Container">
                     <img src="me.png" width="100px" alt="Lakan"><p>
@@ -73,9 +77,6 @@
                 <div class="content-about">
                    <h3 class="heading-text">Lakan Santos</h3>
                    <p>I love to create websites and bring better user interface experience. I have strong passion in programming and bringing satisfactions in web development.</p>
-
-          
-       
                 </div>
 
      
@@ -144,7 +145,7 @@
                             <img src="https://cdn-icons-png.flaticon.com/512/3545/3545435.png" alt="close">
                             </label>
                             <li>
-                                <img src="img/expressjs.png" alt="ExpressJs" class="skillIcon">
+                                <img src="expressjs.png" alt="ExpressJs" class="skillIcon">
                                 <p>EXPRESSJS</p>
             
                             </li>
@@ -171,13 +172,13 @@
                             </label>
                         
                         <li>
-                            <img src="img/mysql.png" alt="mysql" class="skillIcon">
+                            <img src="mysql.png" alt="mysql" class="skillIcon">
                             <p>MYSQL</p>    
                         </li>
 
 
                         <li>
-                            <img src="img/mongodb.png" alt="MongoDb" class="skillIcon">
+                            <img src="mongodb.png" alt="MongoDb" class="skillIcon">
                             <p>MONGODB</p>
                         </li>
     
@@ -217,50 +218,114 @@
     </div>
 
     <div class="experiences">
-        <center>
-            <h2>Experiences</h2>
-            <img src="website.png" alt="website" width="100px"><p>2019-2022 | Full-stack Web Developer at Google</p>
-            <img src="software.png" alt="software" width="100px"><p>2015-2019 | Data Analyst at Amazon </p>
-            <img src="data.png" alt="data"><p>2014- 2015 | Associate Software Engineer at Apple</p>
+
+            <div class="ExpContainer">
+                <div class="exp-Header">
+                    <h1>Experiences</h1>
+                </div>
+
+                <div class="imageContainer">
+                    <div class="image-item">
+                        <img src="software.png" alt="software" width="100px"><p>2017<br>
+                            Data Encoder Intern at Wharff Binangonan </p>
+
+                    </div>
+
+
+                    <div class="image-item">
+                         <img src="website.png" alt="website" width="100px" class="img-item2"><p>
+                            2019-2022 <br>
+                           Web Developer
+                        </p>
+                    </div>
+
+                    <div class="image-item">
+                        <img src="data.png" alt="data"><p>2022 <br>
+                            Data Analyst in Capstone Project titled Perl App</p>
+                    </div>
+                    
+    
+                </div>
+
+            </div>
+     
             
-        </center>
+
   
     </div>
     
     <div class="offer">
-        <center>
-            <h2>Other services I offer</h2>
-            <img src="computer.png" alt="computer" width="100px"> <p>Computer Assembly Services</p> 
-            <img src="network.png" alt="network" width="100px"> <p>Network Management Services</p> 
-            <img src="fullstack.png" alt="fullstack" width="100px"> <p>Full-stack Web Development</p> 
-        </center>
+
+            <div class="offerHeader">
+                <h1 class="offerHeaderText">Other services <span class="offerSpan">I offer</span></h1>
+            </div>
+            <div class="imageContainer">
+                <div class="image-item">
+                    <img src="computer.png" alt="computer" width="100px"> <p>Computer Assembly Services</p> 
+                </div>
+
+                <div class="image-item">
+                    <img src="network.png" alt="network" width="100px"> <p>Network Management Services</p>
+
+                </div>
+
+                <div class="image-item">
+                         
+                    <img src="fullstack.png" alt="fullstack" width="100px"> <p>Full-stack Web Development</p> 
+                </div>
+   
+
+    
+            </div>
+ 
      
     </div>
-    <center>
+
+
         <div id="Projects" class="projects">
-            <br>
-            <br>
- 
-            <h2>Projects</h2>
-            <a href="https://rock-paper-scissors-c8caf.web.app/rngpw1.html?" target=_blank> <img src="rngpassword.jpg" alt="password generator" width="250px"><p>Random Password Generator</p></a>
-           
-             <br>
-             <br>
-     
-            <a href="https://rock-paper-scissors-c8caf.web.app/main.html?" target=_blank> <img src="rockpaperscissors.jpg" alt="password generator" width="250px"><p>Rock Paper Scissors</p></a>
-            
-            <br>
-            <br>
-     
-            <a href="https://netflix-lite-c3dad.web.app/" target=_blank> <img src="netflix.jpg" alt="password generator" width="250px"><p>Netflix Clone</p> </a>
-            
-            <br>
-            <br>
- 
 
+            <div class="projectHeader">
+                <h1>Projects</h1>
+            </div>
+            
+            <div class="projectContainer">
+                <div class="project-item">
+                    <img src="rngpassword.jpg" alt="password generator" class="item">
+                    <div class="ProjectDescription">
+                        <h2 class="projectTitle">Random Password Generator</h2>
+                        <p class="projectContent">Generate Strong and secured password using Javascript. </p>
+                        <a href="https://github.com/lakansantos/rngpassword" target="_blank">View in Github</a>
+             
+                        <a href="https://rock-paper-scissors-c8caf.web.app/rngpw1.html" target=_blank>View Project</a>
+                    </div>
 
-        </div>
-    </center>
+                </div>
+
+                <div class="project-item">
+                    <img src="rockpaperscissors.jpg" alt="rock paper scissors" class="item">
+                    <div class="ProjectDescription">
+                        <h2 class="projectTitle">Rock Paper Scissors Javascript</h2>
+                        <p class="projectContent">RPS game using Math.random in Javascript Dom</p>
+                        <a href="https://github.com/lakansantos/rngpassword/tree/main" target="_blank" class="btn">View on Github</a> 
+                        <a href="https://rock-paper-scissors-c8caf.web.app/main.html" target=_blank class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-item">
+
+                    <img src="netflix.jpg" alt="netflix clone" class="item">
+                    <div class="ProjectDescription">
+                            <h2 class="projectTitle">Netflix Clone React</h2>
+                    <p class="projectContent">Netflix Clone Frontend Only Using ReactJS</p>
+                    <a href="" target="_blank">View on Github</a>
+                    <a href="https://netflix-lite-c3dad.web.app/" target=_blank>View Project</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <div class="divider-content"></div>
+ 
 
    
         <div id="Contact" class="contact">
