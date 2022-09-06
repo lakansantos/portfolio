@@ -4,6 +4,12 @@
     font-family: 'Roboto';
     text-decoration: none;
     list-style: none;
+
+}
+
+
+body{
+    background-color: rgb(24, 40, 70);
 }
 
 .navbar{
@@ -66,30 +72,14 @@
     align-items: center;
 }
 
-/* .nav-right{
-    float: right;
-    margin: 2px;
-    margin-top: 30px;
-    padding-right: 5rem;
-    
-} */
-
-/* .nav-left{
-    float: right;
-    margin: 2px;
-    margin-top: 30px;
-    padding-right: 5rem;
-} */
 
 .head{
     background: url('img/background.svg') No-repeat center/cover;
-    
     background-attachment: fixed;
+
     height: 100vh;  
-    
- 
 }
-/* https://wallpapers-house.com/wp-content/uploads/wallpaper_904/wallpaper_0000209062.jpg */
+
 
 
 .content{
@@ -106,6 +96,7 @@
     
 }
 .content p{
+    color: black;
     font-weight: bold;
     
 }
@@ -247,7 +238,6 @@ h1.about-heading{
     font-family: 'Roboto';
     background-color: rgba(0, 0, 0, 0.904);
     color: white;
-    /* background-color: rgba(0,0,0, 0.1);  */
     transform: scale(1.1);
     transition: .2s;
     font-family: 'Roboto';
@@ -270,33 +260,28 @@ h1.about-heading{
 
 .about{
     background: url('img/Sprinkle.svg') no-repeat center/cover;
-/* https://wallpapers-house.com/wp-content/uploads/wallpaper_822/wallpaper_0000209068.jpg */
     height: 100vh;
-    padding-top: 50px;
     background-attachment: fixed;
     color:white;
-    animation: transitionIn 0.75s;
+    display: grid;
+    grid-template: 
+    "headerAbout headerAbout headerAbout" 20%
+    "containerAbout containerAbout containerAbout" 80%
+    / 20% 80%;
 
 }
-.about-container{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 250px;
-
-}
-
-
-
 .about-heading, p{
     color: black;
 }
 .about-heading{
 
     font-size: 4rem;    
-    margin-top: 50px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    justify-content: center;
 
 }
 .about h3{
@@ -305,44 +290,68 @@ h1.about-heading{
     font-size:  3rem;
  
 }
+
+
+.headerAbout{
+    grid-area: headerAbout;
+}
+.about-container{
+    grid-area: containerAbout;
+    display: flex;
+
+
+}
+.picture-Container{
+    width: 50%;
+}
 .meSpan{
     color: rgb(0, 140, 255);
 }
 .about img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-left:290px;
     border-radius: 50%;
     border: 5px solid rgb(0, 140, 255);
     background: linear-gradient(to right, #c4cbd6, #c9d3da, #d0dbde, #dae2e3, #e4e9e8);
-    justify-content:  center;
-    align-items: center;
+
     width: 400px;
     height: 400px;
     object-fit: fixed;
-    margin-right: 20px;
+
 
 }
 .divider{
     border-left: 2px solid black;
+    margin-top:100px;
     height: 400px;
   
 }
 
 
 .content-about{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: justify;
-    margin-left:20px;
     width: 50%;
+    margin-left: 10px;
 
 }
+    .content-about p{
+        color: black;
+    }
 
 .content-about h3{
     font-family: 'Roboto';
     font-weight: bold;
+    text-align: left;
 }
 
 .content-about p{
+    text-align: left;
     font-size: 1.2rem;
     font-family: 'Roboto';
 }
@@ -354,9 +363,10 @@ h1.about-heading{
 .skills{
     /* background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_48/wallpaper_0000241396.jpg') No-repeat center/cover; */
     background-color: rgba(0, 0, 0, 0.904);
-    height: 100vh;
+
+    height: 200vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 81%, 51% 100%, 0 81%);
     color: white;
-    background-attachment: fixed;
     display: grid;
     grid-template: 
     "header header header" 20%
@@ -417,29 +427,184 @@ h1.skillHeader{
 }
 
 
-/* experiences content  */
+/* experiences and offers content  */
 .experiences{
-    background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_891/wallpaper_0000209080.jpg') No-repeat center/cover;
-    height: 100vh;
-    background-attachment: fixed;
+    background:url('img/wave.svg') no-repeat center/cover;
+    height: 140vh;
 }
 
 
+.ExpContainer{
+    margin-top: 200px;
+}
+
+.experiences h1, p{
+    color: white;
+}
+
+.experiences h1, .offer h1{
+    font-size: 3.5rem;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.imageContainer{
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+.imageContainer p{
+    display: block;
+    text-align: justify;
+    text-align:center;
+    width: 200px;
+    padding-top: 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.image-item{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-item .img-item2{
+
+    margin-left: 20px;
+}
+
+/* offer  */
 .offer{
-    background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_239/wallpaper_0000078410.jpg') no-repeat center/cover;
-    height: 100vh;
-    background-attachment: fixed;
+    background-color: #fff;
+    height: 150vh;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+    border: none;
+
+}
+h1.offerHeaderText{
+    font-variant: small-caps;
+}
+.offer span{
+    color: rgb(0, 140, 255);
+}
+.offer p{
+    color: black;
 }
 
+
+
+/* projects  */
 
 .projects{
-    background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_693/wallpaper_0000242824.jpg') no-repeat center/cover;
+    height: 150vh;
+    background-color: rgb(24, 40, 70);
+}
 
-    background-color: #C3C8D5;
-    height: 100vh;
+.projectHeader{
+    margin-top: 50px;
+}
+.projects h1{
+    font-size: 3.5rem;
+    color: white;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+  
+
+}
+.project-item img{
+    object-fit: contain;
+    height: 150px;
+
+}
+.project-item{
+    width:50%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px auto;
+    width: 50%;
+}
+
+.project-item .item{
+    padding-left: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+.ProjectDescription{
+    height: 100%;
+    width: 50%;
 
 }
 
+.projectContent{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 260px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+.ProjectDescription h2{
+    margin-top: 70px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+.ProjectDescription a{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    
+    margin-left: 10px;
+    padding: 6px;
+    color: black;
+    font-size: 16px;
+}
+
+
+
+.ProjectDescription a:hover{
+    background-color: rgba(0,0,0,.905);
+    color: white;
+}
+/* contact  */
 
 .contact{
     background-color: aquamarine;
@@ -462,6 +627,7 @@ html{
     /20% 80%;
     background-size: contain;
 }
+
 
 
 .contactHeader{
@@ -570,6 +736,10 @@ form .input-box textarea:focus{
 .email{
     margin-top: 20px;
     text-align: center;
+   
+}
+.email p{
+    color: black;
 }
 
 /* footerContents */
@@ -619,6 +789,12 @@ footer{
 }
 .footerContents .githubIcon{
     margin-top: 20px;
+}
+
+.divider-content{
+    height: 100vh;
+    background: url('img/stackbackground.svg') no-repeat center/cover;
+  
 }
 
 @keyframes typing {
@@ -828,8 +1004,8 @@ footer{
     /* ABOUT RESPONSIVENESS */
  
     .about-container{
-        display: grid;
-
+        display: flex;
+        flex-direction: column;
         margin-top: 0px;
         margin-left: 10px;
         
@@ -837,11 +1013,11 @@ footer{
     
     .picture-Container{
         margin-top: 0;
-        
-        
-
     }
     .about img{
+        position: relative;
+        left: 50%;
+        border-radius: 5px 20px 5px;
         border-radius: 50%;
         border: 5px solid rgb(0, 140, 255);
         background: linear-gradient(to right, #c4cbd6, #c9d3da, #d0dbde, #dae2e3, #e4e9e8);
@@ -860,6 +1036,7 @@ footer{
 
     }
     .about h3{
+        margin-top: 20px;
         text-align: center;
         color: black;
         font-size:  1.5rem;
@@ -887,6 +1064,7 @@ footer{
     
     
     .content-about p{
+        text-align: center;
         font-size: 1.1rem;
     }
 
@@ -905,17 +1083,12 @@ footer{
         color: white;
         font-family: 'Roboto';
     }
-    .experiences{
-        padding-top: 80px;
-        background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_891/wallpaper_0000209080.jpg') No-repeat center/cover;
-        height: 100vh;
-        background-attachment: fixed;
-    }
+ 
   
     
     .offer{
         padding-top: 80px;
-        background: url('https://wallpapers-house.com/wp-content/uploads/wallpaper_239/wallpaper_0000078410.jpg') no-repeat center/cover;
+        background-color: #fff;
         height: 100vh;
         background-attachment: fixed;
     }
@@ -926,6 +1099,11 @@ footer{
         background-color: #C3C8D5;
         height: 100vh;
 
+    }
+
+    .project-item a{
+        display: grid;
+        margin: 10px;
     }
     
     
@@ -1040,6 +1218,9 @@ footer{
     /* SKILLS RESPONSIVENESS */
 
 
+    .skills{
+        clip-path: none;
+    }
     .skillsContent{
         display: flex;
         flex-direction: column;
@@ -1085,9 +1266,11 @@ footer{
         position: absolute;
         top: 1%;
         left: 1%;  
+        z-index: 1000;
     }
     .closeButton img{
         width: 50px;
+        z-index: 100;
     }
   
     .frontend h2{
@@ -1251,7 +1434,7 @@ footer{
     }
     .contact{
         height: 1200px;
-        background-color: aqua;
+        background-color: aquamarine;
    
     }
   
@@ -1272,6 +1455,9 @@ footer{
      .email h2, p{
         position: relative;
        
+    }
+    .email>p{
+       color: black;
     }
     .contactHeader h2{
         margin-top: 0;
@@ -1304,5 +1490,286 @@ footer{
         width: 300px;
     }
 
+    /* experiences  */
+    .experiences{
+        height: 140vh;
+    }
+    .imageContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 200px;
+    }
+    .image-item img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        
+    }
+    .experiences h1{
+        font-size: 30px;
+    }
+    
+
+    /* offer  */
+    .offer{
+        background: white;
+        height: 140vh;
+        
+    }
+    .offer h1{
+        font-size: 50px;
+        padding: 0;
+    }
+    .imageContainer{
+        margin: 0;
+        margin-top: 30px;
+    }
+    .offer img{
+
+        height: 120px;
+    }
+
+    /* projects  */
+
+    .projects{
+        background-color: rgb(24, 40, 70);
+        height: 200vh;
+    }
+    
+    .projectContainer{
+        display: flex;
+        flex-direction:column;
+
+    }
+    
+    .project-item{
+        margin-top: 100px;
+        position: relative;
+        left: -10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ProjectDescription{
+        text-align: center;
+        
+    }
+    .project-item h2{
+        width: 270px;
+        display: flex;
+        position: relative;
+        top: -20%;
+        left: -20%;
+        flex-direction: row;
+        text-align: center;
+    }
+    .project-item p{
+        position: relative;
+        top: -20%;
+        left: -20%;
+    }
+
+        .ProjectDescription a{
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 9px;
+            position: relative;
+            top: -35%;
+            left: 60%;
+        }
+
+    /* .project-item a{
+
+        font-size: 10px;
+        display: inline-block;
+        padding: 9px;
+        position: relative;
+        top: -35%;
+        left: 60%;
+ 
+    } */
+    .projects img{
+        width: 500px;
+    }
+
+
+    .divider-content{
+        height: 150vh;
+    }
+
 }
   
+@media (min-width: 481px) and (max-width: 1250px){
+
+    
+    .content img{
+        position: absolute;
+        top: -40%;
+        left: 40%;
+    }
+    .checkbtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px 0;
+        margin-left: 10px;
+    }
+    
+    .download{
+        border: none;
+        padding: 5px;
+   
+    }
+
+    .downloadIcon{
+        display: inline;
+        width: 30px;
+    }
+    .logo{
+        position: absolute;
+        width: 50px;
+        left: 86%;
+        top: -10%;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+   
+        width: 100%;
+        height: 70%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(80, 78, 78);
+        top: 7%;
+        z-index: 100;
+        left: -100%;      /* para mapunta sa kanan, ilagay -left: 100% */
+        transition: all .2s;
+    }
+
+    .nav-left{
+        position: relative;
+        left: 0%;
+    }
+
+    .navbar ul li {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
+        position: relative;
+        right: 5%;
+
+
+    }
+   
+    .navbar ul li a {
+        font-size: 1.5em;
+
+
+    }
+
+    .navbar ul li a:hover{
+ 
+        color: black;
+
+
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+        margin: 0;
+    }
+
+
+    .skills{
+        height: 140vh;
+    }
+    .skills h1{
+        font-size:1.5em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .skillsContent h2{
+        font-size: 1.3em;
+    }
+
+    .offer{
+        height: 140vh;
+    }
+    .projects{
+        background-color: rgb(24, 40, 70);
+        height: 140vh;
+    }
+
+    .projects h2{
+        font-size: 13px;
+    }
+    .projects p{
+        font-size: 10px;
+        width: 100px;
+    }
+
+    .projects button{
+        font-size: 10px;
+        font-weight: bold;
+        padding: 3.2px;
+        position: relative;
+        top: -10%;
+        left: -10%;
+
+    }
+    .projects a{
+        font-size: 10px;
+        font-weight: bold;
+        position: relative;
+        top: -5%;
+        left: 10%;
+    }
+
+    .contact{
+        height: 150vh;
+    }
+    
+
+    .formContainer{
+        width: 400px;
+        position: relative;
+        top: -10%;
+        left: 3%;
+    }
+    .contentContact{
+        display: flex;
+        width: 400px;
+        flex-direction:column;
+    }
+    .icon-list{
+        margin: 10px;
+    }
+    .socmedContainer{
+        display: flex;
+    }
+
+    .email{
+        position: relative;
+        top: 20%;
+        left: -100%;
+    }
+    .socmedContainer .iconContact{
+        width: 100px;
+        height: 100px;
+    }
+}   
+
+
+@media (min-width: 1400px) and (max-width: 1900px) {
+    .logo{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+}
